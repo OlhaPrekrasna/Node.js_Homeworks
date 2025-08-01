@@ -1,0 +1,30 @@
+[2025-08-01 22:53:47] Error: Тестовая ошибка сервера
+    at Server.<anonymous> (file:///Users/olya/Desktop/Node.js_Homeworks/5_homework/logger.js:12:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2025-08-01 22:53:48] Error: Тестовая ошибка сервера
+    at Server.<anonymous> (file:///Users/olya/Desktop/Node.js_Homeworks/5_homework/logger.js:12:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2025-08-01 22:53:54] Error: Тестовая ошибка сервера
+    at Server.<anonymous> (file:///Users/olya/Desktop/Node.js_Homeworks/5_homework/logger.js:12:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2025-08-01 22:53:54] Error: Тестовая ошибка сервера
+    at Server.<anonymous> (file:///Users/olya/Desktop/Node.js_Homeworks/5_homework/logger.js:12:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2025-08-01 22:53:57] Error: Тестовая ошибка сервера
+    at Server.<anonymous> (file:///Users/olya/Desktop/Node.js_Homeworks/5_homework/logger.js:12:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2025-08-01 22:53:57] Error: Тестовая ошибка сервера
+    at Server.<anonymous> (file:///Users/olya/Desktop/Node.js_Homeworks/5_homework/logger.js:12:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
