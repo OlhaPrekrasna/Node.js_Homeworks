@@ -6,7 +6,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3003;
-const JWT_SECRET = process.env.JWT_SECRET;
+const SECRET_JWT = process.env.SECRET_JWT;
 
 let users = [
   {
@@ -40,7 +40,7 @@ const authMiddleware = (req, res, next) => {
 
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, JWT_SECRET);
+    const decoded = jwt.verify(token, SECRET_JWT);
     const user = users.find(u => u.id === decoded.id);
     if (!user) {
       return res.status(401).send('User is not found');
@@ -97,7 +97,6 @@ app.post('/register', async (req, res) => {
   }
 });
 
-// Логин с проверкой mustChangePassword
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
@@ -115,8 +114,8 @@ app.post('/login', async (req, res) => {
       return res.status(403).send('Password change required');
     }
 
-    const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, {
-      expiresIn: '3m',
+    const token = jwt.sign({ id: user.id, role: user.role }, SECRET_JWT, {
+      expiresIn: '30m',
     });
     res.json({ message: 'Successful login', token });
   } catch {
