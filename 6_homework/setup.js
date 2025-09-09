@@ -1,20 +1,18 @@
-import db from "./db.js";
+import db from './db.js';
 
-const setup = () => {
+const createTable = async () => {
   try {
-    db.execute(`
-    CREATE TABLE IF NOT EXISTS products(
-        Id INT AUTO_INCREMENT PRIMARY KEY,
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS products (
+        id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        price DECIMAL(10,2) NOT NULL
-    )
-`);
-    console.log('Table `products` created or already exists.');
-    
-  } catch (error) {
-    console.error('Error creating table', error);
-    
-  }
-}
+        price DECIMAL(10,2) NOT NULL)`);
 
-setup()
+    console.log('The table was created successfully or already exists.');
+  } catch (error) {
+    console.error('Error creating table:', error.message);
+  } finally {
+    process.exit();
+  }
+};
+createTable();

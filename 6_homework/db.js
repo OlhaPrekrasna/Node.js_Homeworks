@@ -1,20 +1,10 @@
-import mysql from 'mysql2'
+import mysql from 'mysql2/promise';
 
-const db = mysql.createConnection({
-  host: 'mysql.itcareerhub.de',
-  user: 'ich1',
-  password: 'ich1_password_ilovedbs',
+const db = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
   database: 'product_db',
-  port: 3306
-})
+});
 
-db.connect((error) => {
-if(error) {
-  console.log(`Error connection database`, error.stack);
-  return
-}
-console.log('Connected to the database' + db.threadId);
-
-})
-
-export default db
+export default db;
