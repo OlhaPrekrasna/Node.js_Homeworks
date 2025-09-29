@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
   res.send('Home page');
 });
 
-app.get('/test', async (req, res) => {
+app.get('/test', async (_, res) => {
+  
   try {
     // Создаю издателя
     const publisher = await Publisher.create({
